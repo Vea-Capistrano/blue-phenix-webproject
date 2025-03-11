@@ -1,0 +1,25 @@
+h2 {
+    color:#cc3322;
+
+}
+
+#AboutTitle {
+    color: blue;
+}
+
+header{
+    background-color: rgb(39, 146, 103);
+    height: 100%;
+}
+nav{
+    background-color: antiquewhite;
+    height: 50px;
+}
+section{
+    background-color: rgb(39, 146, 103);
+    height: 400px;
+}
+footer{
+    background-color: antiquewhite;
+    height: 300px;
+}

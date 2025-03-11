@@ -1,0 +1,20 @@
+body {
+    background-color: beige;
+}
+form {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#submit {
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+#Age{width:50px;}
+
+#submit{
+    width: 100px;
+    justify-content: center;
+    align-items: center;}

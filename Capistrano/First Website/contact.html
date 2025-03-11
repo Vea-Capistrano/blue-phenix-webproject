@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet/external.css">
+    <style>
+        body {
+            background-color: green;
+        }
+        .cssGroup {
+            color:brown;
+        }
+        #firstParagraph {
+            text-transform: uppercase;
+        }
+        label, input{
+            display:block;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            display:inline;
+        }
+        
+        input[type="Email"], input[type="Password"] {
+            height:30px;
+            width:300px;
+            font-size:16px;
+            padding:5px;
+            border-radius:20px;
+        }
+            
+    </style>
+</head>
+<body style="background-color: rgb(135, 135, 221);">
+    <p id="firstParagraph">This is the 1st Paragraph</p>
+    <p class="cssGroup">This is the 2nd Paragraph</p>
+    <p class="cssGroup">This is the 3rd Paragraph</p>
+       <form action="">
+            <label for="">Email</label> 
+            <input type="email">
+            <label for="">Shade</label>
+            <input type="color">
+            <label for="">Password</label>
+            <input type="password">
+            <input type="submit" value="Sign In"> <br>
+       </form>
+
+       <form action="">
+            <label for="">Checkbox</label>
+            <input type="checkbox"> One
+            <input type="checkbox"> Two
+            <input type="checkbox"> Three
+            <input type="checkbox"> Four
+
+            <label for="">Radio button</label>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female
+
+            <textarea rows="10" cols="50"></textarea>
+
+            <input type="submit" value="Save">
+       </form>
+
+       <p>This is a paragraph</p>
+    <br/>
+    <span>This is a span</span>
+    <span>2nd span</span>
+       * {
+        border:1px solid red;
+    }
+    p {
+        padding: 10px 5px;
+        margin: 5px;
+    }
+    span {
+        display: block;
+        height: 100px;
+        width: 200px;
+    }
+</body>
+</html>
