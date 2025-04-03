@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (width <= 480px) {
+            body{
+                background-color: blue;
+            }
+        }
+        #container {
+            display: flex;
+            border: 1px solid red;
+            flex-flow: column wrap;
+        }
+        .items {
+            flex:1;
+            background-color: tomato;
+        }
+        @media screen and (width >= 481px) and (width <= 768px) {
+            body{
+                background-color: bisque;
+            }
+            #container {
+            display: flex;
+            border: 1px solid red;
+            flex-flow: row wrap;
+        }
+        .items {
+            flex:1;
+            background-color: tomato;
+        }
+        }
+        @media screen and (width >= 768px) and (width <=1824px) {
+            body{
+                background-color: yellow;
+            }
+            #container {
+            display: flex;
+            border: 1px solid red;
+            flex-flow: row wrap;
+        }
+        .items {
+            flex:1;
+            background-color: tomato;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+    </div>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa accusamus, perferendis assumenda quibusdam, odit veniam quae autem, necessitatibus alias quod dolores! Vero dolores qui dolor totam incidunt pariatur ea minima?</p>
+</body>
+</html>
