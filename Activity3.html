@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coffee Shop</title>
     <style>
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        }
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
         }
         header {
-            background-color: #6d4c41;;
+            background-color: #6d4c41;
             padding: 20px;
             color: black;
             display: flex;
@@ -42,108 +38,72 @@
             font-weight: bold;
         }
         .hero {
-            background-color: #6d4c41;
+            background-color: #FFAD60;
             color: white;
-            text-align: center;
-            font-size: 30px;
-            padding: 35px 0;
-            height: 355px;
-        }
-        section {
-            padding: 50px 20px;
+            padding: 20px;
             text-align: center;
         }
-        #products {
-            background-color: #ecf0f1;
-            font-size: 35px;
-        }
-        .product-container {
+        main {
             display: flex;
-            justify-content: space-around;
-            margin-top: 30px;
-            flex-flow: row wrap;
-        }
-        .product {
-            background-color: white;
+            flex-wrap: wrap;
+            justify-content: space-between;
             padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            flex-flow: row wrap;
         }
-        .product img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        h2 {
-            font-size: 50px;
-        }
-        .testimonial-section {
-            background-color: #fff;
-            padding: 50px 20px;
-            text-align: center;
-            height: 762px;
-        }
-        .testimonial-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+        .left, .right {
+            display: flex;
+            flex-direction: column;
             gap: 20px;
+            width: 48%;
         }
-
-        .testimonial-card {
-            background-color: #f9f9f9;
-            padding: 20px;
+        .section {
+            background-color: #fff;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            font-size: 35px;
+            height:200px;
         }
-        .testimonial-card img{
-            height: 90px;
+        .section h2 {
+            font-size: 1.5rem;
+            color: #3e2723;
         }
-        .testimonial-card p {
+        .section p {
+            font-size: 1rem;
+            color: #333;
+        }
+        .section img {
+            height:;
+        }
+        .testimonials {
+            display: flex;
+            gap: 20px;
+        }
+        .testimonial {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        .testimonial p {
             font-style: italic;
-            color: #555;
         }
-
-        .testimonial-card h3 {
-            font-size: 1.2em;
-            color: #333;
+        .testimonial h3 {
             margin-top: 10px;
+            font-size: 1.2rem;
+            color: #3e2723;
         }
-
-        .testimonial-card span {
-            color: #888;
-        }
-
-        .testimonial-section h2 {
-            font-size: 2em;
-            color: #333;
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .testimonial-container {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .testimonial-container {
-                grid-template-columns: 1fr;
-            }
-        }
-        footer{
-            background-color: #6d4c41;
+        .subheading {
+            background-color: #3e2723;
             color: white;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 40px;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
+
     <header>
         <div class="logo">
             <img src="assets/images/CoffeeLogo.jfif">
@@ -156,62 +116,63 @@
             </ul>
         </nav>
     </header>
-
     <section id="home">
         <div class="hero">
-            <h2>Welcome to Coffee Lovers</h2>
-            <p>Your daily dose of the best coffee!</p>
+        <h1>Coffee House</h1>
+        <p>Your favorite coffee, brewed with love.</p>
         </div>
     </section>
 
-    <section id="products">
-        <h2>Our Products</h2>
-        <div class="product-container">
-            <div class="product">
-                <img src="assets/images/espresso.jpg" alt="Coffee 1">
-                <h3>Espresso</h3>
-                <p>Strong and bold flavor.</p>
+    <main>
+        <div class="left">
+            <div class="section">
+                <h2>Our Story</h2>
+                <p>We started with a passion for coffee and the dream of serving the best coffee in town. Learn about our journey and the flavors we craft.</p>
             </div>
-    <section id="products 2">
-            <div class="product">
+            <div class="section">
                 <img src="assets/images/Partners-Latte.jpg" alt="Coffee 2">
-                <h3>Latte</h3>
-                <p>Perfectly creamy and smooth.</p>
             </div>
-    <section id="products 3">
-            <div class="product">
+            <div class="section">
+                <h2>Shop</h2>
+                <p>Explore our collection of coffee beans, mugs, and accessories. Everything you need to bring the coffeehouse experience home.</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="section">
+                <img src="assets/images/espresso.jpg" alt="Coffee 1">
+            </div>
+            <div class="section">
+                <h2>Menu</h2>
+                <p>From classic coffees to unique blends, our menu has something for every coffee lover.</p>
+            </div>
+            <div class="section">
                 <img src="assets/images/1.jpg" alt="Coffee 3">
-                <h3>Cappuccino</h3>
-                <p>A delightful balance of coffee and milk foam.</p>
             </div>
+        </div>
+    </main>
+
+    <section class="testimonials">
+        <div class="testimonial">
+            <img src="assets/images/1681142036826.jpg">
+            <p>"The best coffee I've ever had! Every cup is a delight."</p>
+            <h3>Sarah M.</h3>
+        </div>
+        <div class="testimonial">
+            <img src="assets/images/OIP3.jpg">
+            <p>"A great place to relax and enjoy your favorite brew. Highly recommend!"</p>
+            <h3>Emily L.</h3>
+        </div>
+        <div class="testimonial">
+            <img src="...">
+            <p>"Their espresso is perfect! I can't start my day without it."</p>
+            <h3>Michael P.</h3>
         </div>
     </section>
 
-    <section id="testimonials">
-        <h2>TESTIMONIALS</h2>
-        <div class="testimonial-section">
-            <h2>What Our Customers Are Saying</h2>
-            <div class="testimonial-container">
-                <div class="testimonial-card">
-                    <img src="assets/images/Sarah-M.jpg">
-                    <p>"I've tried so many coffee brands, but nothing compares to the rich, bold flavor of this coffee! It's the perfect pick-me-up in the morning, and I love the smoothness in every cup."</p>
-                    <h3>Sarah M.</h3>
-                    <span>Loyal Customer</span>
-                </div>
-                <div class="testimonial-card">
-                    <img src="assets/images/1681142036826.jpg">
-                    <p>"The quality and freshness of the beans are unmatched. Every sip feels like a cozy moment. I can't start my day without a cup of this!"</p>
-                    <h3>Emily L.</h3>
-                    <span>Morning Coffee Lover</span>
-                </div>
-                <div class="testimonial-card">
-                    <img src="assets/images/OIP3.jpg">
-                    <p>"I recently switched to your coffee and haven’t looked back! The flavor is so rich and balanced—it’s the perfect cup to start my day or enjoy with a good book."</p>
-                    <h3>Michael P.</h3>
-                    <span>Regular Shopper</span>
-                </div>
-            </div>
-        </div>
+    <section class="subheading">
+        <h2>Experience the Rich Flavors of Our Coffee</h2>
+        <p>Come visit us and discover why our coffee is loved by so many.</p>
     </section>
 
 </body>
