@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop</title>
     <style>
-        @media screen and (width <= 375px) {
-            body{
-                background-color: #EBE8DB;
+        @media screen and (width <=375px) {
+            body {
+                background-color: black;
+
             }
         }
-        @media screen and (width >= 375px) (width <= 744px) {
-            body{
+
+        @media screen and (width >=375px) (width <=744px) {
+            body {
                 background-color: #D76C82;
             }
+
+
         }
-        @media screen and (width >= 744px) (width <= 1024px) {
-            body{
+
+        @media screen and (width >=744px) (width <=1024px) {
+            body {
                 background-color: #B03052;
             }
         }
-        @media screen and (width >= 1024px) (width <= 1440px) {
-            body{
+
+        @media screen and (width >=1024px) (width <=1440px) {
+            body {
                 background-color: #3D0301;
             }
         }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: bisque;
         }
+
         header {
             background-color: #6d4c41;
             padding: 20px;
@@ -39,64 +48,81 @@
             justify-content: space-between;
             align-items: center;
         }
+
         header .logo h1 {
             margin: 0;
         }
-        .logo img{
+
+        .logo img {
             height: 60px;
         }
+
         header nav ul {
             list-style-type: none;
             display: flex;
         }
+
         header nav ul li {
             margin: 0 15px;
         }
+
         header nav ul li a {
             text-decoration: none;
             color: white;
             font-weight: bold;
         }
+
         .hero {
             background-color: #FFAD60;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
         main {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             padding: 20px;
         }
-        .left, .right {
+
+        .left,
+        .right {
             display: flex;
             flex-direction: column;
             gap: 20px;
             width: 48%;
         }
+
         .section {
             background-color: #fff;
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            height:250px;
+            height: 250px;
         }
+
         .section h2 {
             font-size: 1.5rem;
             color: #3e2723;
         }
+
         .section p {
             font-size: 1rem;
             color: #333;
         }
+
         .section img {
-            height:200px
+            height: 200px;
+            width: 100%;
+        
         }
+
         .testimonials {
             display: flex;
             gap: 20px;
         }
+
         .testimonial {
             background-color: #fff;
             padding: 15px;
@@ -104,17 +130,21 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             flex: 1;
         }
+
         .testimonial p {
             font-style: italic;
         }
+
         .testimonial h3 {
             margin-top: 10px;
             font-size: 1.2rem;
             color: #3e2723;
         }
+
         .testimonial img {
             height: 50px;
         }
+
         .subheading {
             background-color: #3e2723;
             color: white;
@@ -125,6 +155,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -139,10 +170,10 @@
             </ul>
         </nav>
     </header>
-    <section id="home">
+    <section>
         <div class="hero">
-        <h1>Coffee House</h1>
-        <p>Your favorite coffee, brewed with love.</p>
+            <h1>Coffee House</h1>
+            <p>Your favorite coffee, brewed with love.</p>
         </div>
     </section>
 
@@ -150,14 +181,16 @@
         <div class="left">
             <div class="section">
                 <h2>Our Story</h2>
-                <p>We started with a passion for coffee and the dream of serving the best coffee in town. Learn about our journey and the flavors we craft.</p>
+                <p>We started with a passion for coffee and the dream of serving the best coffee in town. Learn about
+                    our journey and the flavors we craft.</p>
             </div>
             <div class="section">
                 <img src="assets/images/Partners-Latte.jpg" alt="Coffee 2">
             </div>
             <div class="section">
                 <h2>Shop</h2>
-                <p>Explore our collection of coffee beans, mugs, and accessories. Everything you need to bring the coffeehouse experience home.</p>
+                <p>Explore our collection of coffee beans, mugs, and accessories. Everything you need to bring the
+                    coffeehouse experience home.</p>
             </div>
         </div>
 
@@ -199,4 +232,5 @@
     </section>
 
 </body>
+
 </html>
