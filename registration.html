@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    form {
+        background-color: #7AC6D2;
+        height: 670px;
+        width: 400px;
+        margin: auto;
+        border-radius: 10px;
+    }
+    label, input {
+        display: flex;
+        padding-top: 20px;
+        padding-left: 50px;
+        margin-left: 80px;
+        
+    }
+    input[type = "radio"]{
+        display: inline;
+        margin: 5px;
+        margin-left: 80px;
+    }
+    header {
+        justify-content: center;
+        display: flex;
+        justify-items: center;
+    }
+    input[type = "submit"] {
+        background-color: blue;
+        color: white;
+        margin-left: 100px;
+        font-style: normal;
+        font-size: 15px;
+        border-radius: 10px;
+        gap: 20px;
+        padding-left: 60px;
+        padding-top: 5px;
+        margin-top: 10px;
+        padding-right: 60px;
+
+    }
+    body{
+        background-color: #B5FCCD;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Registration Form</h1>
+    </header>
+    <form action="">
+        <label for="">Firstname</label> 
+        <input type="firstname">
+        <label for="">Lastname</label>
+        <input type="lastname">
+        <label for="">Gender</label>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <label for="">Birthdate</label> 
+        <input type="birthdate">
+        <label for="">Contact No</label> 
+        <input type="contactno">
+        <label for="">Email</label> 
+        <input type="email">
+        <label for="">Username</label> 
+        <input type="username">
+        <label for="">Password</label> 
+        <input type="password">
+        <input type="submit" value="Sign In">
+   </form>
+</body>
+</html>
