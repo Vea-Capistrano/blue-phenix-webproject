@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+            justify-content: center;
+        }
+        form {
+        background-color: white;
+        height: 640px;
+        width: 400px;
+        margin: auto;
+        border-radius: 10px;
+    }
+    label, input {
+        display: flex;
+        padding-top: 15px;
+        padding-left: 50px;
+        margin-left: 80px;
+        font-size: 15px;
+        
+    }
+    input[type = "radio"]{
+        display: inline;
+        margin: 5px;
+        margin-left: 80px;
+    }
+    header {
+        justify-content: center;
+        display: flex;
+        justify-items: center;
+    }
+    input[type = "submit"] {
+        background-color: green;
+        color: white;
+        margin-left: 100px;
+        font-style: normal;
+        font-size: 15px;
+        border-radius: 10px;
+        gap: 20px;
+        padding-left: 60px;
+        padding-top: 5px;
+        margin-top: 20px;
+        padding-right: 60px;
+    }
+        #fname-error{
+            font-style: italic;
+            color: red;
+        }
+        #email-error{
+            font-style: italic;
+            color: red;
+        }
+        #gender-error{
+            font-style: italic;
+        }
+        #password-error{
+            font-style: italic;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return validate()">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" minlength="5" maxlength="10">
+        <span id="fname-error"></span>
+
+        <label for="lname">Lastname</label>
+        <input type="text" id="lname" minlength="5" maxlength="10">
+        <span id="lname-error"></span>
+
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <span id="gender-error"></span>
+
+        <label for="date">Birthdate</label> 
+        <input type="text" id="date">
+        <span id="date-error"></span>
+
+        <label for="contactno">Contact No</label> 
+        <input type="text" id="contactno" pattern="[0-9]{11,}">
+        <span id="contactno-error"></span>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <span id="email-error"></span>
+
+        <label for="uname">Username</label> 
+        <input type="text" id="uname">
+        <span id="uname-error"></span>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" pattern="[a-z0-9]{8,}">
+        <span id="password-error"></span>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validate(){
+            let isValid = true;
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let gender = document.getElementById("gender").value;
+            let date = document.getElementById("date").value;
+            let contactno = document.getElementById("contactno").value;
+            let email = document.getElementById("email").value;
+            let uname = document.getElementById("uname").value;
+            let password = document.getElementById("password").value;
+            
+            if (fname == ""){
+                document.getElementById("fname-error").innerHTML = "Name is required";
+                isValid = false;
+            }
+            else if(fname.length <5){
+                document.getElementById("fname-error").innerHTML = "Name must be at least 5 characters long";
+                isValid = false;
+            }
+            else{
+                document.getElementById("fname-error").innerHTML = "";
+            }
+            if (lname == ""){
+            document.getElementById("lname-error").innerHTML= "Last Name is required";
+            isValid = false;
+            }
+            else if(lname.length <5){
+            document.getElementById("lname-error").innerHTML = "Last Name must be at least 5 characters long";
+            isValid = false;
+            }
+            if (gender == ""){
+            document.getElementById("gender-error").innerHTML = "Gender is required";
+            isValid = false;
+            }
+            if (date == ""){
+            document.getElementById("date-error").innerHTML= "Birth Date is required";
+            isValid = false;
+            }
+            if (contactno == ""){
+            document.getElementById("contactno-error").innerHTML = "Contact No is required";
+            isValid = false;
+            }
+            if(email == ""){
+                document.getElementById("email-error").innerHTML = "Email is required";
+                isValid = false;
+            }
+            if (uname == ""){
+            document.getElementById("uname-error").innerHTML= "Username is required";
+            isValid = false;
+            }
+            if(password == ""){
+                document.getElementById("password-error").innerHTML = "Password is required";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
