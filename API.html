@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gamesList{
+            background-color: burlywood;
+            line-height: 1.5rem;
+            border-radius: 20px;
+        }
+        .game-item{
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        h1{
+            color: blue;
+            text-align: center;
+        }
+        button{
+            background-color: burlywood;
+            text-align: center;
+            margin-left: 880px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MMO Games API</h1>
+    <button onclick="fetchAllGames()">Fetch API</button>
+    <ul id="gamesList">
+
+    </ul>
+    <script>
+        function fetchAllGames(){
+            fetch("https://dogapi.dog/api/v2/breeds")
+            .then(response => response.json())
+            .then(data =>{
+                const gamesList = document.getElementById("gamesList")
+                gamesList.innerHTML = "";
+                data.data.forEach(game => {
+                    const li = document.createElement("li");
+                    li.setAttribute("class" , "game-item");
+                    li.innerHTML = game.attributes.name;
+                    gamesList.appendChild(li);
+                })
+            })
+            .catch()
+        }
+    </script>
+</body>
+</html>
