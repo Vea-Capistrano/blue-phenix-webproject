@@ -6,38 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Shop</title>
     <style>
-        @media screen and (width <=375px) {
+        @media screen and (width <= 480px) {
             body {
-                background-color: black;
+                background-color: aqua;
 
             }
         }
 
-        @media screen and (min-width >=375px) and (max-width <=744px) {
-            body {
-                background-color: #D76C82;
-            }
-
-
-        }
-
-        @media screen and (min-width >=744px) and (max-width <=1024px) {
-            body {
-                background-color: #B03052;
-            }
-        }
-
-        @media screen and (min-width >=1024px) and (max-width <=1440px) {
-            body {
-                background-color: #3D0301;
-            }
-        }
+        
 
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: bisque;
+
         }
 
         header {
@@ -47,6 +29,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        @media screen and (width >= 481px) and (width <= 768px) {
+            body {
+                background-color: #D76C82;
+            }
+
+
         }
 
         header .logo h1 {
@@ -71,6 +61,13 @@
             color: white;
             font-weight: bold;
         }
+
+        @media screen and (width >= 768px) and (width <=1824px) {
+            body {
+                background-color: #B03052;
+            }
+        }
+
 
         .hero {
             background-color: #FFAD60;
