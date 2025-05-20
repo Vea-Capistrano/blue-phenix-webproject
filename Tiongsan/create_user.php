@@ -3,13 +3,28 @@
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST["username"];
         $password = $_POST["password"];
-        $cipher= password_hash( $password, PASSWORD_DEFAULT);
+        $role = $_POST["role"]; //new
+        $password = $password . "system";
 
-        echo "Plain Password: $password <br>";
-        echo "Cipher Password: $cipher <br>";
+        // ENCRYPTION
+        $cipher = password_hash($password, PASSWORD_DEFAULT);
 
-        $decrypted = password_verify($password, $cipher);
+        // Database Connection
+        // [servername, username, password, database name, port]
+        // "localhost", "root", "", "db_tiongsan", 3307
+        $conn = mysqli_connect("localhost", "batch1", "batch1", "db_tiongsan", 3307);
 
-        echo "Decrypted Password: $decrypted <br>";
+        // Check Connection
+        if($conn->connect_error){
+            echo "Connection failed: " . $conn->connect_error;
+        }
+        else{
+            echo "Connected";
+        }
+
+        // INSERT QUERY
+        $sql ="INSERT INTO `tbl_users`(`username`, `password`, `role`) VALUES ('$username','$cipher', '$role')";
+
+        $conn->query($sql);
     }
 ?>

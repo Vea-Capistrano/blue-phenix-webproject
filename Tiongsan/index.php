@@ -39,7 +39,7 @@
             border: 1px solid #ccc;
         }
         input[type="submit"] {
-            background-color: #E69DB8;
+            background-color: blue;
             color: white;
             padding: 10px 15px;
             border: none;
@@ -56,6 +56,12 @@
 
         <label for="password">Password</label>
         <input type="password" name="password" id="password">
+
+        <label for="role">Role</label>
+        <select name="role" id="role">
+            <option value="administrator">Administrator</option>
+            <option value="student">Student</option>
+        </select>
 
         <input type="submit" value="Register">
     </form>
